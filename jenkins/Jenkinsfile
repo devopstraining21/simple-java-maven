@@ -16,9 +16,9 @@ stages {
                 }
             }
         }
-        stage('Excutable') {
+        stage('Executable') {
             steps {
-                chmod 777 './jenkins/scripts/deliver.sh'
+                sh '/var/lib/jenkins/workspace/build-maven-pipeline/test.sh'
             }
         }
 

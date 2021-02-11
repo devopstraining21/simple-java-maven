@@ -16,9 +16,14 @@ stages {
                 }
             }
         }
+        stage('Excutable') {
+            steps {
+                chmod 777 './jenkins/scripts/deliver.sh'
+            }
+        }
+
         stage('Deliver') {
             steps {
-	        chmod +x './jenkins/scripts/deliver.sh'
                 sh './jenkins/scripts/deliver.sh'
             }
         }
